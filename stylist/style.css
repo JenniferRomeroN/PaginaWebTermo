@@ -1,0 +1,204 @@
+/*Globales reiniciarlos*/
+*::after,
+*::after,
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{ /*Esto afecta todo el body*/
+    margin: 0 auto;
+    max-width: 1200px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: #93b378;
+}
+.icon-cart{ /*es para poner el icono mas pequeño*/
+    width: 40px;
+    height: 40px;
+    stroke:#000;
+}
+
+.icon-cart:hover{
+    cursor: pointer;
+}
+img{
+    max-width: 100%; /*es para que todas las imagenes tengan una anchura maxima (no se puede salir a desbordar)*/
+}
+
+/* Header*/
+
+header{
+    display: flex;
+    justify-content: space-between; /*para separar la imagen con el h1, (hacerlo cada esquina)*/
+    padding: 30px 0 40px 0; /*para que no este muy pegado arriba (30 arriba y 40 abajo)*/
+}
+
+nav a{
+    display: inline-block; /*para darle margen al texto*/
+    text-decoration: none;
+    color: #93b378;
+    margin: 0 30px;
+    padding: 5px 15px;
+    border-radius: 30px;
+}
+
+nav a:hover{
+    background-color:#93b378;
+    color: #ffff;
+}
+.container-icon{
+    position: relative; /*para posicionarlo con el flujo de la pagina*/
+}
+
+.count-products{
+    position: absolute;
+    top: 55%;
+    right: 0;
+
+    background-color: #000;
+    color: whitesmoke;
+    width: 25px;
+    height: 25px;
+
+    display: flex; /**/
+    justify-content: center; /*para controlar los elementos de su eje principal*/
+    align-items: center;
+    border-radius: 50%;
+
+}
+
+#contador-productos{ /*Para que el numero que este en el carrito este mas pequeño, (es un id)*/
+    font-size: 12px;
+}
+
+.container-cart-products{
+    position: absolute;
+    top: 50px;
+    right: 0;
+
+    background-color: #fff;
+    width: 400px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.20);
+    border-radius: 10px;
+    z-index: 1;/*para que cuando se habra el carrito este por arriba*/
+
+}
+
+.cart-product{
+    display: flex;/*para que este todo en una misma linea*/
+    align-items: center; /*para que estemos seguros que este centrado verticalmente cuando lo cambiemos*/
+    justify-content: space-between;
+    padding: 30px;
+
+    border-bottom: 1px solid rgba(0, 0, 0, 0.20); /*para poner la linea en el carrito en el total*/
+}
+
+.info-cart-product{
+    display: flex;
+    justify-content: space-between;
+    flex: 0.8; /*para darle mas espacio, ya que estan en un mismo espacio*/
+}
+
+.titulo-producto-carrito{
+    font-size: 20px;
+}
+
+.precio-producto-carrito{
+    font-weight: 700;
+    font-size: 20px;
+    margin-left: 10px;
+
+}
+
+.cantidad-producto-carrito{
+    font-weight: 400;
+    font-size: 20px;
+
+}
+.icon-close{ /*para darle tamanio al icono*/
+    width: 25px;
+    height: 25px;
+
+}
+
+.icon-close :hover{
+    stroke: red;
+    cursor: pointer;
+}
+
+.cart-total{
+    display: flex;
+    justify-content: center; /*para alinearlo en enmedio*/
+    align-items: center;/*centrado verticalmente*/
+    padding: 20px 0;
+    gap: 20px;
+}
+.cart-pagar h3{
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.total-pagar{
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.hidden-cart{ /*para ocultar lo que tiene el carrito*/
+    display: none;
+}
+
+
+/* Main*/
+.container-items{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /*para que tenga 3, para que se repitan 3 veces en el mismo tamaño*/
+    gap: 20px;/* separacion */
+}
+
+.item{
+    border-radius: 10px; /*para que tengan un borde*/
+}
+
+.item:hover{  /*cuando ponemos el cursor en un elemento*/
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.20) ; /*para hacer sombra cuando pasamos el cursor*/
+}
+
+.item img{
+    width: 200%;
+    height: 200px;
+    object-fit:scale-down; /*adapta la imagen*/
+    border-radius: 10px 10px 0 0;
+    transition: all .5s; /*para darle tiempo a la imagen*/
+}
+
+.item figure{
+    overflow: hidden; /*para que la imagen no se desborde*/
+}
+
+.item:hover img{
+    transform: scale(1.2); /*para que escale la imagen (como efecto que suba)*/
+
+}
+
+.info-product{
+    padding: 15px 30px; /*para darle separacion de la imagen y los laterales*/
+    line-height: 2; /*interlineado*/
+    display: flex;
+    flex-direction: column;
+    gap: 10px;/*para darle el espacio a las columnas*/
+}
+
+.price{
+    font-size: 18px;
+    font-weight: 900; /*para darle grosor*/
+}
+
+.info-product button{
+    border: none; 
+    background: none;
+    background-color: #93b378;
+    color: azure;
+    padding: 15px 10px;
+    cursor: pointer;
+}
