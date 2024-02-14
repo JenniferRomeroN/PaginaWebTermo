@@ -1,10 +1,11 @@
 /*Globales reiniciarlos*/
-*::after,
+*::before,
 *::after,
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    list-style: none;
 }
 
 body{ /*Esto afecta todo el body*/
@@ -201,4 +202,87 @@ nav a:hover{
     color: azure;
     padding: 15px 10px;
     cursor: pointer;
+}
+
+.footerContainer{
+    padding: 20px 10px;
+    text-align: center;
+    
+}
+
+
+.footer{
+    background-color: #93b378;
+    padding: 70px 0;
+    left: 90px;
+}
+
+.footer-row{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.footer-links{
+    width: 25%;
+    padding: 0 15px;
+}
+
+.footer-links h4{
+    font-size: 20px;
+    color: #fff;
+    margin-bottom: 25px;
+    font-weight: 500;
+    border-bottom: 2px solid blue;
+    padding-bottom: 10px;
+    display: inline-block;
+}
+
+.footer-links ul li a{
+    font-size: 18px;
+    text-decoration: none;
+    color: beige;
+    display: block;
+    margin-bottom: 15px;
+    transition: all .3s ease;
+}
+
+.footer-links ul li a{
+    color:#fff;
+    padding-left: 6px;
+}
+
+.socialIcons a{
+    display: inline-block;
+    min-height: 40px;
+    width: 40px;
+    background-color:  rgba(255, 255, 255, 0.2);
+    margin: 0 10px 10px 0;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: #fff;
+    transition: all .5s ease;
+}
+
+.socialIcons a:hover{
+    background-color: transparent;
+}
+
+@media(max-width: 991px){
+    .footer-row{
+        text-align: center;
+    }
+
+    .footer-links{
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+}
+
+.copyright{
+    margin-top: 15px;
+    text-align: center;
+    font-size: 13px;
+    color: white;
 }
